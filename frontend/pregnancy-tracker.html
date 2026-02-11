@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baby Journey Tracker</title>
+    <link rel="stylesheet" href="pregnancy-tracker.css">
+</head>
+<body>
+    <div class="pt-container">
+        <header class="pt-header">
+            <h1>Baby Journey Tracker</h1>
+            <p class="pt-subtitle">Follow your baby's development week by week and learn how to best support the mother.</p>
+            <div class="pt-input-row">
+                <label for="dueDate">Expected due date</label>
+                <input type="date" id="dueDate">
+                <button id="setDueDateBtn">Show this week</button>
+            </div>
+            <p class="pt-meta" id="ptMeta"></p>
+        </header>
+
+        <main class="pt-main" aria-live="polite">
+            <section class="pt-week-nav">
+                <button id="prevWeekBtn" class="pt-nav-btn">&larr; Previous week</button>
+                <div class="pt-week-label">
+                    <span id="weekNumberLabel">Week 1</span>
+                </div>
+                <button id="nextWeekBtn" class="pt-nav-btn">Next week &rarr;</button>
+            </section>
+
+            <section class="pt-grid">
+                <article class="pt-card">
+                    <h2>Baby this week</h2>
+                    <p class="pt-size"><span id="babySize"></span></p>
+                    <p class="pt-weight"><span id="babyWeight"></span></p>
+                    <ul class="pt-comparisons">
+                        <li id="comparison1"></li>
+                        <li id="comparison2"></li>
+                    </ul>
+                </article>
+
+                <article class="pt-card">
+                    <h2>What’s happening in the mother’s body</h2>
+                    <p id="motherChanges"></p>
+                </article>
+
+                <article class="pt-card pt-support-card">
+                    <h2>How you can support</h2>
+                    <ul id="supportTips" class="pt-support-list"></ul>
+                </article>
+            </section>
+        </main>
+
+        <footer class="pt-footer">
+            <p>This tool gives approximate information and is not medical advice. Always consult healthcare professionals for concerns.</p>
+        </footer>
+    </div>
+
+    <script src="pregnancy-tracker.js"></script>
+</body>
+</html>
+

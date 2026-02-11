@@ -1,0 +1,245 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: radial-gradient(circle at top left, #e0f2ff 0%, #f9fbff 35%, #f5f5f5 100%);
+    color: #1f2933;
+    min-height: 100vh;
+}
+
+.pt-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px 16px 40px;
+}
+
+.pt-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.pt-header h1 {
+    font-size: 2.2rem;
+    color: #102a43;
+    margin-bottom: 8px;
+}
+
+.pt-subtitle {
+    color: #627d98;
+    max-width: 640px;
+    margin: 0 auto 20px;
+}
+
+.pt-input-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.pt-input-row label {
+    font-weight: 500;
+}
+
+.pt-input-row input[type="date"] {
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 1px solid #cbd2d9;
+    font-size: 0.95rem;
+    min-width: 160px;
+}
+
+.pt-input-row button {
+    padding: 9px 14px;
+    border-radius: 999px;
+    border: none;
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 8px 16px rgba(37, 99, 235, 0.25);
+    transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.2s ease;
+}
+
+.pt-input-row button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 20px rgba(37, 99, 235, 0.35);
+}
+
+.pt-input-row button:active {
+    transform: translateY(0);
+    box-shadow: 0 5px 10px rgba(37, 99, 235, 0.25);
+}
+
+.pt-meta {
+    font-size: 0.9rem;
+    color: #627d98;
+    min-height: 1.5em;
+}
+
+.pt-main {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 24px;
+    padding: 20px 18px 22px;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+    backdrop-filter: blur(10px);
+}
+
+.pt-week-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+    gap: 8px;
+}
+
+.pt-nav-btn {
+    border-radius: 999px;
+    border: none;
+    padding: 8px 14px;
+    background: #e0edff;
+    color: #1d4ed8;
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.pt-nav-btn:hover {
+    background: #c7ddff;
+    transform: translateY(-1px);
+}
+
+.pt-nav-btn:disabled {
+    background: #e5e7eb;
+    color: #9ca3af;
+    cursor: default;
+    transform: none;
+}
+
+.pt-week-label {
+    text-align: center;
+    font-weight: 600;
+    color: #111827;
+}
+
+.pt-week-label span {
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+}
+
+.pt-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.pt-card {
+    background: white;
+    border-radius: 18px;
+    padding: 16px 16px 14px;
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
+    border: 1px solid #e5e7eb;
+}
+
+.pt-card h2 {
+    font-size: 1.1rem;
+    color: #111827;
+    margin-bottom: 8px;
+}
+
+.pt-size {
+    font-weight: 600;
+    color: #1d4ed8;
+    margin-bottom: 4px;
+}
+
+.pt-weight {
+    font-weight: 500;
+    color: #111827;
+    margin-bottom: 8px;
+}
+
+.pt-comparisons {
+    list-style: none;
+    padding-left: 0;
+    color: #4b5563;
+    font-size: 0.95rem;
+}
+
+.pt-comparisons li + li {
+    margin-top: 4px;
+}
+
+.pt-card p {
+    color: #374151;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.pt-support-card {
+    grid-column: span 3;
+}
+
+.pt-support-list {
+    margin-top: 4px;
+    padding-left: 18px;
+    color: #374151;
+    font-size: 0.95rem;
+}
+
+.pt-support-list li + li {
+    margin-top: 4px;
+}
+
+.pt-footer {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: #6b7280;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .pt-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pt-support-card {
+        grid-column: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .pt-header h1 {
+        font-size: 1.7rem;
+    }
+
+    .pt-main {
+        padding: 16px 12px 18px;
+    }
+
+    .pt-week-nav {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .pt-week-label {
+        order: -1;
+        margin-bottom: 4px;
+    }
+
+    .pt-nav-btn {
+        justify-content: center;
+    }
+}
+
